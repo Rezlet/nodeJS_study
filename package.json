@@ -4,6 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "watch": "node-sass --watch src/resources/views/scss/ --output src/public/css",
+    "test": "echo \"error: no test specified\" && exit 1",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
@@ -24,13 +27,17 @@
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.3"
+    "express-handlebars": "^5.3.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.6",
+    "mongoose-delete": "^0.5.4"
   },
   "devDependencies": {
     "husky": "^7.0.0",
     "lint-staged": "^11.1.2",
-    "node-sass": "^6.0.1",
+    "node-sass": "^4.14.1",
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1"
   }
